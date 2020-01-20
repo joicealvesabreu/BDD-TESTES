@@ -1,9 +1,11 @@
 package br.com.Rsinet.Hub.BDD.Testes;
 
 import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
 
+
+import br.com.Rsinet.Hub.BDD.PageObjects.Home_Cadastro_de_Usuario;
 import cucumber.api.CucumberOptions;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -13,9 +15,13 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features = "Feature", glue = { "stepDefinition" })
 
 public class Test_Runner_Cadastro {
-
+	private WebDriver driver;
+	
+	
+	
 @Given("^eu esteja na tela principal$")
 public void eu_esteja_na_tela_principal() throws Throwable {
+	Home_Cadastro_de_Usuario.menu();
    
 }
 

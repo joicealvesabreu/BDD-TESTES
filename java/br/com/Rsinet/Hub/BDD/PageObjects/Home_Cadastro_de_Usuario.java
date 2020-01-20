@@ -24,57 +24,57 @@ public class Home_Cadastro_de_Usuario {
 	}
 
 	@FindBy(how = How.ID, using = "menuUserSVGPath")
-	private WebElement clicarmenu;
+	private static WebElement clicarmenu;
 
 	@FindBy(how = How.XPATH, using = "//a[@class='create-new-account ng-scope']")
-	private WebElement clicarCadastrar;
+	private static WebElement clicarCadastrar;
 
 	@FindBy(how = How.NAME, using = "usernameRegisterPage")
-	private WebElement nomeUsuario;
+	private static WebElement nomeUsuario;
 
 	@FindBy(how = How.NAME, using = "emailRegisterPage")
-	private WebElement emailUsuario;
+	private static WebElement emailUsuario;
 
 	@FindBy(how = How.NAME, using = "passwordRegisterPage")
-	private WebElement senhaUsuario;
+	private static WebElement senhaUsuario;
 
 	@FindBy(how = How.NAME, using = "confirm_passwordRegisterPage")
-	private WebElement confirmasenhaUsuario;
+	private static WebElement confirmasenhaUsuario;
 
 	@FindBy(how = How.NAME, using = "first_nameRegisterPage")
-	private WebElement primeiroNome;
+	private static WebElement primeiroNome;
 
 	@FindBy(how = How.NAME, using = "last_nameRegisterPage")
-	private WebElement ultimoNome;
+	private static WebElement ultimoNome;
 
 	@FindBy(how = How.NAME, using = "phone_numberRegisterPage")
-	private WebElement telefoneUsuario;
+	private static WebElement telefoneUsuario;
 
 	@FindBy(how = How.NAME, using = "countryListboxRegisterPage")
-	private WebElement paisUsuario;
+	private static WebElement paisUsuario;
 
 	@FindBy(how = How.NAME, using = "cityRegisterPage")
-	private WebElement cidadeUsuario;
+	private static WebElement cidadeUsuario;
 
 	@FindBy(how = How.NAME, using = "addressRegisterPage")
-	private WebElement enderecoUsuario;
+	private static WebElement enderecoUsuario;
 
 	@FindBy(how = How.NAME, using = "state_/_province_/_regionRegisterPage")
-	private WebElement estadoUsuario;
+	private static WebElement estadoUsuario;
 
 	@FindBy(how = How.NAME, using = "postal_codeRegisterPage")
-	private WebElement cepUsuario;
+	private static WebElement cepUsuario;
 
 	@FindBy(how = How.NAME, using = "allowOffersPromotion")
-	private WebElement aceitaprimeiroTermos;
+	private static WebElement aceitaprimeiroTermos;
 
 	@FindBy(how = How.NAME, using = "i_agree")
-	private WebElement aceitasegundoTermos;
+	private static WebElement aceitasegundoTermos;
 
 	@FindBy(how = How.NAME, using = "register_btnundefined")
-	private WebElement registraUsuario;
+	private static WebElement registraUsuario;
 
-	public void menu() {
+	public static void menu() {
 		clicarmenu.click();
 	}
 
