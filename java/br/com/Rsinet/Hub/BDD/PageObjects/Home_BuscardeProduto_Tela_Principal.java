@@ -8,6 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Home_BuscardeProduto_Tela_Principal {
 
@@ -22,29 +25,9 @@ public class Home_BuscardeProduto_Tela_Principal {
 	@FindBy(how = How.XPATH, using = "//div[@id='laptopsImg']")
 	private WebElement mouse;
 
-	/*
-	 * public static WebElement mouse(WebDriver driver) { element =
-	 * driver.findElement(By.xpath("//div[@id='laptopsImg']")); // WebDriverWait
-	 * wait = new WebDriverWait(driver, 10); //
-	 * wait.until(ExpectedConditions.elementToBeClickable(element));
-	 * JavascriptExecutor ex = (JavascriptExecutor) driver;
-	 * ex.executeScript("arguments[0].click();", element); return element; }
-	 */
 
-	@FindBy(how = How.ID, using = "3")
+	@FindBy(how = How.LINK_TEXT, using = "HP Pavilion 15z Touch Laptop")
 	private WebElement produto;
-
-	/*
-	 * public static WebElement produto(WebDriver driver) {
-	 * 
-	 * try { element = driver.findElement(By.id("3"));
-	 * 
-	 * } catch (Exception e) { } Assert.assertNotNull(element);
-	 * System.out.println("Ending test " + new Object() {
-	 * }.getClass().getEnclosingMethod().getName());
-	 * 
-	 * return element; }
-	 */
 
 	@FindBy(how = How.XPATH, using = "//div[@class='cell categoryRight']//li[@class='ng-scope']")
 	private WebElement Adicionarlaptop;
@@ -59,13 +42,16 @@ public class Home_BuscardeProduto_Tela_Principal {
 	private WebElement Carinhopop;
 
 	public void telaprincipa() {
-		mouse.click();
+		
 		JavascriptExecutor ex = (JavascriptExecutor) driver;
+		WebElement element = mouse;
 		ex.executeScript("arguments[0].click();", element);
 	}
 
 	public void produto_Laptop() {
+	
 		produto.click();
+		
 	}
 
 	public void Adicionar_Laptop() {
@@ -81,8 +67,9 @@ public class Home_BuscardeProduto_Tela_Principal {
 	}
 
 	public void ProdutonoCarinho() {
-		Carinhopop.click();
+		
 		JavascriptExecutor ex = (JavascriptExecutor) driver;
+		WebElement element = Carinhopop;
 		ex.executeScript("arguments[0].click();", element);
 	}
 
