@@ -1,6 +1,7 @@
 package br.com.Rsinet.Hub.BDD.Testes;
 
 
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -12,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import br.com.Rsinet.Hub.BDD.PageObjects.Home_Cadastro_de_Usuario;
 import br.com.Rsinet.Hub.BDD.PageObjects.Home_ChromeDriver;
 import br.com.Rsinet.Hub.BDD.Utility.Constant;
-import cucumber.api.java.After;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -20,6 +21,8 @@ import cucumber.api.java.en.When;
 public class Cadastro_de_Usuario {
 	WebDriver driver;
 	 Home_Cadastro_de_Usuario pesquisa;
+	 
+	 
 	
 	@Given("^tela principal do site$")
 	public void tela_principal_do_site() throws Throwable {
@@ -92,7 +95,7 @@ public class Cadastro_de_Usuario {
 		Assert.assertTrue(cadastrojaexiste.contains("User name already exists"));
 		System.out.println( cadastrojaexiste);
 	}
-	@After
+	@AfterClass
 	public void Finalizar() {
 		Home_ChromeDriver.FechandoDriver(driver);
 	}

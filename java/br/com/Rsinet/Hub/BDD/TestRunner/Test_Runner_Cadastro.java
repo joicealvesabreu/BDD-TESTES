@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "Feature", 
+		features = "Feature/PesquisaPorLupa", 
 		glue = { "br.com.Rsinet.Hub.BDD.Testes" }
 		)
 
