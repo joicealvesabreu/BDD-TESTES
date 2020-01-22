@@ -7,8 +7,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "Feature/", 
-		glue = { "br.com.Rsinet.Hub.BDD.T" }
+		features = "Feature/TelaInicial_BuscandoProduto.feature", 
+		glue = { "br.com.Rsinet.Hub.BDD" }
 		)
 
 public class Test_Runner_TelaInicial {

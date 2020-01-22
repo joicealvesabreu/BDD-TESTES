@@ -5,11 +5,16 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import br.com.Rsinet.Hub.BDD.Utility.Constant;
 
 public class Home_ChromeDriver {
 
 	private static WebDriver driver;
+	
 
 	public static WebDriver InicializaDriver() {
 		driver = new ChromeDriver();
@@ -21,9 +26,11 @@ public class Home_ChromeDriver {
 	}
 
 	public static void FechandoDriver(WebDriver driver) {
-
+		
+	
 		if (driver != null)
 			driver.quit();
+	
 	}
 
 }

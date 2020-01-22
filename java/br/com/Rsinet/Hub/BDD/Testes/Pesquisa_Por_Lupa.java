@@ -7,7 +7,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-
 import org.junit.Assert;
 import br.com.Rsinet.Hub.BDD.PageObjects.Home_ChromeDriver;
 import br.com.Rsinet.Hub.BDD.PageObjects.Home_PesquisandoProduto_Lupa;
@@ -15,7 +14,6 @@ import br.com.Rsinet.Hub.BDD.Utility.Constant;
 import br.com.Rsinet.Hub.BDD.Utility.ExcelUtils;
 import br.com.Rsinet.Hub.BDD.Utility.PrintScreen;
 import cucumber.api.java.After;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -30,7 +28,7 @@ public class Pesquisa_Por_Lupa {
 
 	@Given("^entrar no site$")
 	public void entrar_no_site() throws Throwable {
-		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./Relatorios/PesquisaPorMassaDeDados123.html");
+		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./Relatorios/PesquisaPorMassaDeDados.html");
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);
 		driver = Home_ChromeDriver.InicializaDriver();
@@ -64,7 +62,9 @@ public class Pesquisa_Por_Lupa {
 		Assert.assertTrue(achouNome);
 		System.out.println(achouNome);
 		PrintScreen.getScreenshot(driver);
-
+		logger.log(Status.PASS, "Sucesso");
+		extent.flush();
+		Home_ChromeDriver.FechandoDriver(driver);
 	}
 
 	@Then("^Nao encontrou o produto$")
@@ -75,14 +75,10 @@ public class Pesquisa_Por_Lupa {
 		Assert.assertFalse(produtoerrado);
 		System.out.println(produtoerrado);
 		PrintScreen.getScreenshot(driver);
-	}
-
-	@After
-	public void finaliza() {
-
-		Home_ChromeDriver.FechandoDriver(driver);
 		logger1.log(Status.PASS, "Nao Encontrou");
-		logger.log(Status.PASS, "Sucesso");
 		extent.flush();
+		Home_ChromeDriver.FechandoDriver(driver);
 	}
+
+
 }
