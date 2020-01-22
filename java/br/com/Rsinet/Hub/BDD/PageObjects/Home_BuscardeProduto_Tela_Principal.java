@@ -38,7 +38,7 @@ public class Home_BuscardeProduto_Tela_Principal {
 	@FindBy(how = How.ID, using = "checkOutPopUp")
 	private WebElement Carinhopop;
 
-	public void telaprincipa() {
+	public void telaprincipal() {
 		
 		JavascriptExecutor ex = (JavascriptExecutor) driver;
 		WebElement element = mouse;
@@ -46,9 +46,7 @@ public class Home_BuscardeProduto_Tela_Principal {
 	}
 
 	public void produto_Laptop() {
-	
-		produto.click();
-		
+	produto.click();
 	}
 
 	public void Adicionar_Laptop() {

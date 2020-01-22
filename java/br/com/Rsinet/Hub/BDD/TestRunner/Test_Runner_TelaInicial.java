@@ -1,7 +1,5 @@
 package br.com.Rsinet.Hub.BDD.TestRunner;
 
-
- 
 import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
@@ -9,12 +7,10 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "Feature/PesquisaPorLupa", 
-		glue = { "br.com.Rsinet.Hub.BDD.Testes" }
+		features = "Feature/", 
+		glue = { "br.com.Rsinet.Hub.BDD.T" }
 		)
 
- 
-public class Test_Runner_Cadastro {
-
+public class Test_Runner_TelaInicial {
 
 }
