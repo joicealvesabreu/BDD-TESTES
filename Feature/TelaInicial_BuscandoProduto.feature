@@ -1,16 +1,16 @@
-Feature: Tela inicial do site advance
+Feature: Buscando um produto pela tela de inicio
 
-Background: iniciando os dois testes
+Background: Vai entrar no site e cliclar na imagem dos laptops
 	 Given iniciando o chromedriver para entrar no site
     When colocando o produto no carinho
  
   @tag1
-  Scenario: cenario certo
+  Scenario: vai buscar o laptop escolhido peçlo elemento
     Then sera feito o processo de acessar o produto que foi escolhindo e ver se e o certo
    
 
   @tag2
-  Scenario: scenario produto errado
+  Scenario: vai comparar o elemento e ver que o produto nao e o certo
   	Then sera verificado se o produto correnponde se nao for sera false
   
 
